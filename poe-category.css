@@ -1,0 +1,370 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+/* header */
+
+.header {
+    background-color: #f1f1f1;
+    position:sticky; /*to prevent z-index on child from overlapping the header */
+}
+
+.header p {
+    padding: 15px 15px;
+    font-size: 20px;
+    display: inline-block;
+}
+
+.header a {
+    text-decoration: none;
+    color: #111;
+    background-color: #ddd;
+    padding: 5px 10px;
+    box-shadow: 0 0 2px darkgray;
+}
+
+.header p:nth-child(2) {
+    position: absolute;
+    left:0;
+    right:0;
+    text-align: center;
+    z-index: -1;
+}
+
+
+/* category circles */
+
+.category-wrapper {
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width:40%;
+    margin: auto;
+}
+
+.category  {
+    text-decoration: none;
+    color: #111;
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    margin: 20px;
+    background-color: #f1f1f1;
+    line-height:150px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+    position: relative;
+    box-shadow: 0 0 15px 1px darkgray;
+}
+
+
+/* Singers */
+
+.four {
+    background-image: url("icons/mic2.png");
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    
+}
+
+.four span {
+    background-color: rgba(221, 221, 221, 0.959);
+    line-height:17px;
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    padding:20px;
+    transition: .6s;
+    transform: translatey(100%);
+    font-style: italic;
+}
+
+.four:hover span {
+    transform: translatey(0%);
+}
+
+
+/* Founders */
+
+.first {
+    background-image: url("icons/founder2.png");
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    
+}
+
+.first span {
+    background-color: rgba(221, 221, 221, 0.959);
+    line-height:17px;
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    padding:20px;
+    transition: .6s;
+    transform: translatey(100%);
+    font-style: italic;
+}
+
+.first:hover span {
+    transform: translatey(0%);
+}
+
+
+/* Inventors */
+
+.second {
+    background-image: url("icons/idea4.png");
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    
+}
+
+.second span {
+    background-color: rgba(221, 221, 221, 0.959);
+    line-height:17px;
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    padding:20px;
+    transition: .6s;
+    transform: translatey(100%);
+    font-style: italic;
+}
+
+.second:hover span {
+    transform: translatey(0%);
+}
+
+
+/* Nobel Laureates */
+
+.third {
+    background-image: url("icons/nobel4.png");
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    
+}
+
+.third span {
+    background-color: rgba(221, 221, 221, 0.959);
+    line-height:17px;
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    padding:20px;
+    transition: .6s;
+    transform: translatey(100%);
+    font-style: italic;
+}
+
+.third:hover span {
+    transform: translatey(0%);
+}
+
+
+/* Actors */
+
+.five {
+    background-image: url("icons/acting2.png");
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    
+}
+
+.five span {
+    background-color: rgba(221, 221, 221, 0.959);
+    line-height:17px;
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    padding:20px;
+    transition: .6s;
+    transform: translatey(100%);
+    font-style: italic;
+}
+
+.five:hover span {
+    transform: translatey(0%);
+}
+
+
+/* Artists */
+
+.six {
+    background-image: url("icons/art3.png");
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    
+}
+
+.six span {
+    background-color: rgba(221, 221, 221, 0.959);
+    line-height:17px;
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    padding:20px;
+    transition: .6s;
+    transform: translatey(100%);
+    font-style: italic;
+}
+
+.six:hover span {
+    transform: translatey(0%);
+}
+
+
+/* buttons */
+
+.buttons {
+    display:flex;
+    justify-content: center;
+    position:absolute;
+    bottom: 10%;
+    left:0;
+    right:0;
+}
+
+.buttons a {
+    box-shadow: 0 0 10px 2px #ddd;
+    position:relative;
+    width:70px;
+    height:70px;
+    margin:10px;
+    border-radius: 50%;
+    border: 1px solid black;
+    line-height:90px;
+    text-align:center;
+}
+
+.buttons a:hover {
+    box-shadow: 0 0 10px #111;
+    cursor: pointer;
+}
+
+.buttons img {
+    width:50%;
+}
+
+
+/* button hover effects */
+
+.about:hover::after {
+    content: "About us";
+    position: absolute;
+    display:inline-block;
+    width:100px;
+    bottom:80px;
+    right:0;
+    color:white;
+    background-color: #111;
+    line-height:17px;
+    padding:5px;
+    border-radius: 5px;
+}
+
+
+.categories:hover::after {
+    content: "Categories";
+    position: absolute;
+    display:inline-block;
+    width:100px;
+    bottom:80px;
+    left:-24px;
+    color:white;
+    background-color: #111;
+    line-height:17px;
+    padding:5px;
+    border-radius: 5px;
+}
+
+.search:hover::after {
+    content: "Search";
+    position: absolute;
+    display:inline-block;
+    width:100px;
+    bottom:80px;
+    left:0;
+    color:white;
+    background-color: #111;
+    line-height:17px;
+    padding:5px;
+    border-radius: 5px;
+}
+
+
+/* search input */
+
+#search {
+    position: absolute;
+    left:0;
+    right:0;
+    text-align: center;
+    opacity: 0; 
+    transition: opacity .5s;
+    visibility: hidden; 
+}
+
+input {
+    position: relative;
+    left:;
+    top:30px; 
+    padding: 15px 10px;  
+    width:400px;
+    height:;
+    font-size: 20px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid;
+}
+
+button {
+    position: relative;
+    top:50px;
+    width:50px;
+    height:55.2px; 
+    font-size: 20px;
+    background-image: url("icons/search.png");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+   
+}
+
+#search:target {
+    opacity:1;
+    visibility: visible;
+}
+
+button:active {
+    background-color: #ddd;
+}
+
+input::-webkit-input-placeholder {
+    color: #ddd;

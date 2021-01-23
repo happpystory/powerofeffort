@@ -1,0 +1,209 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+/* header */
+
+.header {
+    background-color: #f1f1f1;
+    position:fixed;
+    top:0;
+    width:100%;
+}
+
+.header p {
+    padding: 15px 15px;
+    font-size: 20px;
+    display: inline-block;
+}
+
+.header a {
+    text-decoration: none;
+    color: #111;
+    background-color: #ddd;
+    padding: 5px 10px;
+    box-shadow: 0 0 2px darkgray;
+}
+
+.header p:nth-child(2) {
+    position: absolute;
+    left:0;
+    right:0;
+    text-align: center;
+    z-index: -1;
+}
+
+
+/* comment page */
+
+.profile-wrapper {
+    position: relative;
+    top:160px;
+    left:160px;
+    width:80%;
+    border:1px solid #ddd;
+    padding:30px 50px 0 50px;
+    min-height:590px;
+    box-shadow: 0 0 15px 1px darkgray;
+}
+
+.profile-wrapper p {
+    position: absolute;
+    top:50%;
+    left:0;
+    right:0;
+    text-align: center;
+}
+
+
+/* comment input */
+
+textarea {
+    position:absolute;
+    top:10px;
+    left:70px;
+    width:80%;
+    height:70px;
+    resize: none;
+    padding:10px;
+    border-radius: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+textarea::-webkit-input-placeholder {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #ddd;
+}
+
+button {
+    position: absolute;
+    right:60px;
+    top:25px;
+    padding:10px 20px;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    outline: none;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+button:active {
+    background-color: #ddd;
+}
+
+
+/* separation line */
+
+hr {
+    position:relative;
+    top:60px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* profile picture */
+
+.profile-wrapper::before {
+    content: "";
+    position: absolute;
+    background-image: url("pics/britney_spears.jpg"); 
+     background-size: cover; 
+    width:200px;
+    height:200px;
+    border-radius: 50%;
+    left:-150px;
+    top:-100px;
+    box-shadow: 0 0 15px 1px darkgray;
+}
+
+.profile-wrapper::first-letter {
+    font-weight: ;
+    font-size: 40px;
+}
+
+
+/* buttons */
+
+.buttons {
+    display:flex;
+    position: absolute;
+    right: 142px;
+    top:100px;
+}
+
+.profile-button {
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    margin: 0 5px ;
+    position: relative;
+    box-shadow: 0 0 15px 1px darkgray;
+}
+
+.text-button {
+    background-image: url("icons/text.png");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.comments-button {
+    background-image: url("icons/comments2.jpg");
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pics-button { 
+    background-image: url("icons/pics.png");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* button hover effects */
+
+.text-button:hover::after {
+    content: "Story";
+    position: absolute;
+    right:0;
+    top:-35px;
+    background-color: #111;
+    color: white;
+    padding:5px 15px;
+    border-radius: 5px;
+}
+
+.comments-button:hover::after {
+    content: "Comments";
+    position: absolute;
+    right: -21px;
+    top:-35px;
+    background-color: #111;
+    color: white;
+    padding:5px 15px;
+    border-radius: 5px;
+
+}
+
+.pics-button:hover::after {
+    content: "Pictures";
+    position: absolute;
+    left:0;
+    top:-35px;
+    background-color: #111;
+    color: white;
+    padding:5px 15px;
+    border-radius: 5px;
+
+}
+
+.profile-button:hover {
+    box-shadow: 0 0 15px 1px #111;
+}

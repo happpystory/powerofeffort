@@ -1,0 +1,72 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+/* header */
+
+.header {
+    background-color: #f1f1f1;
+    position: fixed;
+    top:0;
+    width:100%; 
+}
+
+.header p {
+    padding: 15px 15px;
+    font-size: 20px;
+    display: inline-block;
+}
+
+.header a {
+    text-decoration: none;
+    color: #111;
+    background-color: #ddd;
+    padding: 5px 10px;
+    box-shadow: 0 0 2px darkgray;
+}
+
+.header p:nth-child(2) {
+    position: absolute;
+    left:0;
+    right:0;
+    text-align: center;
+    z-index: -1;
+}
+
+
+/* list */
+
+.singer-wrapper {
+    width:50%;
+    margin: 80px auto 0;
+    background-color: #f1f1f1;
+    box-shadow: 0 0 15px 1px darkgray;
+}
+
+.singer  {
+    text-align: center;
+    cursor: pointer;
+    padding:10px 0;
+    font-size:20px;
+    border-bottom: 1px solid #ddd;
+    display:block;
+    text-decoration: none;
+    color: #111;
+}
+
+
+/* list hover effects */
+
+.singer:hover {
+    background-color: #ddd;
+}
+
+.singer:hover:not(:first-child) {
+    cursor: not-allowed;
+}
+
+
+

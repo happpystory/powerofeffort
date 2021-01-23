@@ -1,0 +1,179 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+/* header */
+
+.header {
+    background-color: #f1f1f1;
+}
+
+.header p {
+    padding: 15px 15px;
+    font-size: 20px;
+}
+
+.header a {
+    text-decoration: none;
+    color: #111;
+    background-color: #ddd;
+    padding: 5px 10px;
+    box-shadow: 0 0 2px darkgray;
+}
+
+
+/* preview circles */
+
+.preview-wrapper {
+    display:flex;
+    justify-content: center;
+}
+
+.preview-wrapper img {
+    width:100%;
+    height:240px;
+    border-radius:50%;
+    box-shadow: 0 0 15px 1px darkgray;
+}
+
+.circle {
+    width:240px;
+    margin: 20px;
+}
+
+
+/* buttons */
+
+.buttons {
+    display:flex;
+    justify-content: center;
+    position:absolute;
+    bottom: 10%;
+    left:0;
+    right:0;
+}
+
+.buttons a {
+    box-shadow: 0 0 10px 2px #ddd;
+    position:relative;
+    width:70px;
+    height:70px;
+    margin:10px;
+    border-radius: 50%;
+    border: 1px solid black;
+    line-height:90px;
+    text-align:center;
+}
+
+.buttons img {
+    width:50%;
+}
+
+
+/* button hover effects */
+
+.buttons a:hover {
+    box-shadow: 0 0 10px #111;
+    cursor: pointer;
+}
+
+.about:hover::after {
+    content: "About us";
+    position: absolute;
+    display:inline-block;
+    width:100px;
+    bottom:80px;
+    right:0;
+    color:white;
+    background-color: #111;
+    line-height:17px;
+    padding:5px;
+    border-radius: 5px;
+}
+
+.categories:hover::after {
+    content: "Categories";
+    position: absolute;
+    display:inline-block;
+    width:100px;
+    bottom:80px;
+    left:-24px;
+    color:white;
+    background-color: #111;
+    line-height:17px;
+    padding:5px;
+    border-radius: 5px;
+}
+
+.search:hover::after {
+    content: "Search";
+    position: absolute;
+    display:inline-block;
+    width:100px;
+    bottom:80px;
+    left:0;
+    color:white;
+    background-color: #111;
+    line-height:17px;
+    padding:5px;
+    border-radius: 5px;
+}
+
+
+/* search input */
+
+#search {
+    position: absolute;
+    left:0;
+    right:0;
+    text-align: center;
+    opacity: 0; 
+    transition: opacity .5s;
+    visibility: hidden; 
+}
+
+input {
+    position: relative;
+    left:;
+    top:50px; 
+    padding: 15px 10px;  
+    width:400px;
+    height:;
+    font-size: 20px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid;
+}
+
+button {
+    position: relative;
+    top:70px;
+    width:50px;
+    height:55.2px; 
+    font-size: 20px;
+    background-image: url("icons/search.png");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+   
+}
+
+button:active {
+    background-color: #ddd;
+}
+
+#search:target {
+    opacity:1;
+    visibility: visible;
+}
+
+input::-webkit-input-placeholder {
+    color: #ddd;
+}
